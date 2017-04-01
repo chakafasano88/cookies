@@ -1,0 +1,34 @@
+
+body {
+
+
+}
+.sugar img {
+  border: 1px solid black;
+  width: 170px;
+  height: 170px;
+}
+
+.lemon img {
+  border: 1px solid black;
+  width: 150px;
+  height: 150px;
+}
+
+.chocolate img {
+  border: 1px solid black;
+  width: 150px;
+  height: 150px;
+}
+
+.sugar {
+  display: inline;
+}
+
+.lemon{
+  display: inline;
+}
+
+.chocolate {
+  display: inline;
+}
