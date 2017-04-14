@@ -1,12 +1,17 @@
 var chocolateBtn = document.getElementById("chocolatebtn");
 var lemonBtn = document.getElementById("lemonbtn");
 var sugarBtn = document.getElementById("sugarbtn");
+var resetBtn = document.getElementById("resetBtn1");
+var allText = document.getElementById("buttons")
 var sugar = 0;
 var lemon = 0;
 var chocolate = 0;
+var lemoninput = document.getElementById("lemon");
+var sugarinput = document.getElementById("sugar");
+var chocolateinput = document.getElementById("chocolate");
+
 
 sugarBtn.addEventListener("click",function(){
-  event.preventDefault();
   sugar = sugar +1
   document.getElementById("sugar").value = sugar;
   Cookies.set("Sugar", sugar);
@@ -23,3 +28,16 @@ chocolateBtn.addEventListener("click",function(){
   document.getElementById("chocolate").value = chocolate;
   Cookies.set("Chocolate", chocolate);
 });
+
+resetBtn1.addEventListener("click", function(){
+  document.getElementById("lemon").value = 0;
+  document.getElementById("sugar").value = 0;
+  document.getElementById("chocolate").value = 0;
+});
+
+window.onload = function(event){
+  lemoninput.value = Cookies.get("Lemon");
+  sugarinput.value = Cookies.get("Sugar");
+  chocolateinput.value = Cookies.get("Chocolate");
+
+};
